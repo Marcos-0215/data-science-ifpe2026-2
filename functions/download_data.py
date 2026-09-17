@@ -11,13 +11,12 @@ def download_data(
     Args:
         tickers(str): The ticker.
         multi_level_index(bool): Remode/Include row indexes.
-
     
     """
 
     result = yf.download(
-        tickers = 'AAPL',
-        multi_level_index = False
+        tickers = tickers,
+        multi_level_index = multi_level_index
         ).reset_index()
 
     return result
